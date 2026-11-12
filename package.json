@@ -1,0 +1,12 @@
+{
+  "name": "okin-vibezz",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/preview.mjs",
+    "check": "node scripts/build.mjs && for f in admin/js/*.js admin/js/views/*.js; do node --check $f || exit 1; done"
+  },
+  "engines": { "node": ">=20" }
+}

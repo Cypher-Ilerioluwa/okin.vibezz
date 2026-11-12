@@ -1,0 +1,11 @@
+create table gallery_items(id uuid primary key default gen_random_uuid(),media_type text not null check(media_type in('photo','video')),title text not null,caption text,media_url text,thumbnail_url text,video_id text check(video_id ~ '^[A-Za-z0-9_-]{11}$'),alt_text text,credit text,category text,featured boolean not null default false,status content_status not null default 'draft',sort_order int not null default 0,published_at timestamptz,created_at timestamptz not null default now(),updated_at timestamptz not null default now(),check(status<>'published' or published_at is not null));
+create table pages(id uuid primary key default gen_random_uuid(),slug text not null unique,title text not null,body text,seo_description text,status content_status not null default 'draft',published_at timestamptz,updated_at timestamptz not null default now());
+alter table contact_messages add column ip_hash text;
+alter table booking_enquiries add column ip_hash text;
+create index on contact_messages(ip_hash,created_at);create index on booking_enquiries(ip_hash,created_at);
+alter table gallery_items enable row level security;alter table pages enable row level security;
+create policy pub_gallery on gallery_items for select using(status='published' and published_at<=now());
+create policy staff_gallery on gallery_items for all using(is_content_staff()) with check(is_content_staff());
+create policy pub_pages on pages for select using(status='published' and published_at<=now());
+create policy staff_pages on pages for all using(is_content_staff()) with check(is_content_staff());
+create trigger t4 before update on gallery_items for each row execute function touch_updated_at();

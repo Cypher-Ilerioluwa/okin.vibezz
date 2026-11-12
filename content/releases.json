@@ -1,0 +1,113 @@
+[
+  {
+    "id": "s1",
+    "title": "AKANNI",
+    "slug": "akanni",
+    "release_type": "ep",
+    "description": "The six-track AKANNI EP, available on Audiomack.",
+    "tracks": [
+      {
+        "track_number": 1,
+        "title": "Irentegbe"
+      },
+      {
+        "track_number": 2,
+        "title": "Fuji Lambalistic"
+      },
+      {
+        "track_number": 3,
+        "title": "Akanni"
+      },
+      {
+        "track_number": 4,
+        "title": "ÒGÚNDÁBÈDE"
+      },
+      {
+        "track_number": 5,
+        "title": "Iyami"
+      },
+      {
+        "track_number": 6,
+        "title": "Mowa Dupe"
+      }
+    ],
+    "release_platform_links": [
+      {
+        "platform": "Audiomack",
+        "url": "https://audiomack.com/ifadamilareokinifa-1/album/akanni-1",
+        "is_primary": true,
+        "display_order": 0
+      },
+      {
+        "platform": "Apple Music",
+        "url": "https://music.apple.com/us/artist/okin-vibezz/1727951578",
+        "display_order": 1
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "s2",
+    "title": "Egungun (Freestyle)",
+    "slug": "egungun-freestyle",
+    "release_type": "single",
+    "cover_url": "/assets/images/egungun-freestyle-cover.jpg",
+    "description": "Egungun (Freestyle) by Okin Vibezz.",
+    "release_platform_links": [
+      {
+        "platform": "Apple Music",
+        "url": "https://music.apple.com/us/artist/okin-vibezz/1727951578",
+        "is_primary": true,
+        "display_order": 0
+      },
+      {
+        "platform": "Audiomack",
+        "url": "https://audiomack.com/ifadamilareokinifa-1",
+        "display_order": 1
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "s3",
+    "title": "GBEMIDEBE",
+    "slug": "gbemidebe",
+    "release_type": "single",
+    "description": "GBEMIDEBE by Okin Vibezz.",
+    "release_platform_links": [
+      {
+        "platform": "Apple Music",
+        "url": "https://music.apple.com/us/artist/okin-vibezz/1727951578",
+        "is_primary": true,
+        "display_order": 0
+      },
+      {
+        "platform": "Audiomack",
+        "url": "https://audiomack.com/ifadamilareokinifa-1",
+        "display_order": 1
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "s4",
+    "title": "As How Na!",
+    "slug": "as-how-na",
+    "release_type": "single",
+    "description": "As How Na! by Okin Vibezz.",
+    "release_platform_links": [
+      {
+        "platform": "Apple Music",
+        "url": "https://music.apple.com/us/artist/okin-vibezz/1727951578",
+        "is_primary": true,
+        "display_order": 0
+      },
+      {
+        "platform": "Audiomack",
+        "url": "https://audiomack.com/ifadamilareokinifa-1",
+        "display_order": 1
+      }
+    ],
+    "status": "published"
+  }
+]

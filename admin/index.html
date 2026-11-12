@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#12121a">
+<title>Okin Vibezz CMS</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/assets/branding/favicon-32.png"><link rel="apple-touch-icon" href="/assets/branding/apple-touch-icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/admin/admin.css"></head>
+<body>
+<div id="boot" class="boot"><span class="spin lg"></span></div>
+
+<!-- Sign in (there is no sign-up: accounts are created by the owner in Supabase) -->
+<main id="login" class="login" hidden>
+  <div class="login-art" aria-hidden="true"><img src="/assets/branding/logo-lockup.png" alt=""><p>Content manager</p></div>
+  <section class="login-card">
+    <div class="brandrow"><img src="/assets/branding/logo-emblem.png" alt="" width="46" height="46"><div><b>Okin Vibezz</b><small>CMS</small></div></div>
+    <form id="loginForm" novalidate>
+      <h1>Welcome back</h1><p class="sub">Sign in to manage the website.</p>
+      <label><span class="lbl">Email</span><input id="lEmail" type="email" autocomplete="username" required></label>
+      <label><span class="lbl">Password</span><input id="lPass" type="password" autocomplete="current-password" required></label>
+      <p class="msg" id="lMsg" role="alert"></p>
+      <button class="btn primary block" id="lGo" type="submit">Sign in</button>
+      <button class="link" id="lForgot" type="button">Forgot password?</button>
+    </form>
+    <form id="resetForm" hidden novalidate>
+      <h1>Reset password</h1><p class="sub">Enter your email and we will send you a reset link.</p>
+      <label><span class="lbl">Email</span><input id="rEmail" type="email" autocomplete="username" required></label>
+      <p class="msg" id="rMsg" role="alert"></p>
+      <button class="btn primary block" type="submit">Send reset link</button>
+      <button class="link" id="rBack" type="button">Back to sign in</button>
+    </form>
+    <form id="newPassForm" hidden novalidate>
+      <h1>Choose a new password</h1><p class="sub">Use at least 10 characters.</p>
+      <label><span class="lbl">New password</span><input id="nPass" type="password" autocomplete="new-password" minlength="10" required></label>
+      <p class="msg" id="nMsg" role="alert"></p>
+      <button class="btn primary block" type="submit">Save password</button>
+    </form>
+    <p class="fine"><a href="/">&larr; Back to website</a></p>
+  </section>
+</main>
+
+<!-- Not configured / no access -->
+<main id="notice" class="login" hidden><section class="login-card"><div class="brandrow"><img src="/assets/branding/logo-emblem.png" alt="" width="46" height="46"><div><b>Okin Vibezz</b><small>CMS</small></div></div><h1 id="nTitle"></h1><p class="sub" id="nBody"></p><button class="btn primary block" id="nBtn" type="button" hidden>Sign out</button></section></main>
+
+<!-- App -->
+<div id="app" hidden>
+  <div class="scrim" id="scrim"></div>
+  <aside class="side" id="side" aria-label="Sections">
+    <a class="side-brand" href="#/dashboard"><img src="/assets/branding/logo-emblem.png" alt="" width="40" height="40"><span><b>Okin Vibezz</b><small>CMS</small></span></a>
+    <nav id="nav"></nav>
+    <div class="side-foot"><div class="who" id="who"></div><a class="side-link" id="viewSite2" href="/" target="_blank" rel="noopener"></a><button class="side-link" id="signOut" type="button"></button></div>
+  </aside>
+  <div class="main">
+    <header class="top">
+      <button class="icon-btn menu" id="menuBtn" type="button" aria-label="Open menu"></button>
+      <h1 id="title">Dashboard</h1>
+      <div class="top-actions"><a id="viewSite" class="btn sm ghost" href="/" target="_blank" rel="noopener"></a><button class="btn sm sun" id="publishBtn" type="button"><span class="dot" hidden></span></button></div>
+    </header>
+    <main id="view" tabindex="-1"></main>
+  </div>
+</div>
+
+<dialog id="modal"></dialog>
+<div id="toasts" aria-live="polite"></div>
+<script src="/admin/config.js"></script>
+<script type="module" src="/admin/js/main.js"></script>
+</body></html>

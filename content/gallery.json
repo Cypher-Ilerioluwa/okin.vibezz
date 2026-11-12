@@ -1,0 +1,18 @@
+[
+  {
+    "media_type": "photo",
+    "title": "Okin Vibezz",
+    "alt_text": "Portrait of Okin Vibezz in a patterned denim jacket",
+    "media_url": "/assets/images/okin-vibezz-portrait.webp",
+    "credit": "",
+    "featured": true
+  },
+  {
+    "media_type": "photo",
+    "title": "Egungun (Freestyle) cover art",
+    "alt_text": "Cover art for Egungun (Freestyle) showing two masquerade figures at dusk",
+    "media_url": "/assets/images/egungun-freestyle-cover.jpg",
+    "credit": "Okin Music Nation",
+    "featured": true
+  }
+]
