@@ -1,0 +1,22 @@
+# Dependencies and build output
+node_modules/
+dist/
+
+# Secrets: never commit. .env.example is the only env file kept.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Tool state
+.netlify/
+supabase/.temp/
+supabase/.branches/
+
+# OS and editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
